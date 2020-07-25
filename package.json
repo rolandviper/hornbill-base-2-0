@@ -1,0 +1,45 @@
+{
+  "name": "hornbill-base-2-0",
+  "version": "0.0.0",
+  "description": "Hornbill esports base overlays",
+  "homepage": "",
+  "author": {
+    "name": "rolandviper",
+    "email": "56328676+rolandviper@users.noreply.github.com",
+    "url": ""
+  },
+  "files": [
+    "dashboard",
+    "graphics",
+    "extension.js",
+    "extension"
+  ],
+  "keywords": [
+    "",
+    "nodecg-bundle"
+  ],
+  "nodecg": {
+    "compatibleRange": "^1.1.1",
+    "dashboardPanels": [
+      {
+        "name": "wait-splash",
+        "title": "Wait Splash",
+        "width": 2,
+        "file": "wait-splash.html",
+        "headerColor": "#525F78"
+      }
+    ],
+    "graphics": [
+      {
+        "file": "waitsplash.html",
+        "width": 1920,
+        "height": 1080
+      }
+    ]
+  },
+  "repository": "https://github.com/nodecg/nodecg.git",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "gsap": "^3.4.2"
+  }
+}

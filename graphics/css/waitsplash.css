@@ -1,0 +1,41 @@
+body {
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+#img1 {
+	width: 100vw;
+
+	height: auto;
+}
+
+.jalousie {
+	width: 100vw;
+	position: relative;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+.jalousie .slice {
+	display: block;
+	position: absolute;
+	top: 0;
+	height: 100%;
+	background-color: transparent;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.logo {
+	position: absolute;
+	background-color: red;
+	background-image: url('../img/HornbillESC-01.svg');
+	background-size: cover;
+	width: 52vw;
+	height: 73%;
+	z-index: 1;
+	top: 10%;
+	left: 15%;
+}

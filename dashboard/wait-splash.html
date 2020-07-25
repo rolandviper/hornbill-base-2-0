@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<style>
+		.monospace {
+			font-family: monospace;
+		}
+	</style>
+</head>
+<body>
+	<span>WaitTitle</span>
+
+	<input type="text" id="waittitle">
+	<br>
+	<span>WaitSub</span>
+	<br>
+	<input type="text" id="subtitle">
+	<br>
+	<hr>
+	<button onclick="play()">Play</button>
+	<button onclick="update()">Update</button>
+	<button onclick="stop()">Stop</button>
+
+<script>
+const titleInput = document.getElementById('waittitle');
+const subInput = document.getElementById('subtitle');
+
+function play() {
+	const data = { title: titleInput.value, sub: subInput.value };
+
+	nodecg.sendMessage('startsplash', data);
+}
+
+function stop() {
+	const data = { title: titleInput.value, sub: subInput.value };
+
+	nodecg.sendMessage('stopsplash', data);
+}
+
+function update() {
+	const data = { title: titleInput.value, sub: subInput.value };
+
+	nodecg.sendMessage('updatesplash', data);
+}
+
+</script>
+</body>
+</html>
