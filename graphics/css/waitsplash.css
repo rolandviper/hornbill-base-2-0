@@ -30,12 +30,12 @@ body {
 
 .logo {
 	position: absolute;
-	background-color: red;
-	background-image: url('../img/HornbillESC-01.svg');
-	background-size: cover;
 	width: 52vw;
 	height: 73%;
 	z-index: 1;
-	top: 10%;
-	left: 15%;
+	top: 3%;
+	left: 25%;
+}
+
+#hornbill {
 }

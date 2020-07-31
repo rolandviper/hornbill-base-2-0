@@ -1,4 +1,4 @@
-import { gsap } from '../../node_modules/gsap/index.js';
+import { gsap, Power0 } from '../../node_modules/gsap/index.js';
 const tl = gsap.timeline();
 
 $(document).ready(function() {
@@ -32,13 +32,16 @@ $(document).ready(function() {
 		}
 
 		var objs = $(this).find('.slice').css('opacity', 0);
+		var logo = $('.logo').css('opacity', 0);
 
 		nodecg.listenFor('startsplash', (data) => {
 			tl.staggerTo(objs, speed, { y: dist, autoAlpha: 1, x: dist }, offset);
+			tl.to(logo, { duration: 2, autoAlpha: 1, ease: 'power1.in' }, '-=1');
 		});
 
 		nodecg.listenFor('stopsplash', () => {
-			tl.staggerTo(objs, speed, { y: dist, autoAlpha: 0 }, -offset);
+			tl.staggerTo(objs, speed, { y: dist, autoAlpha: 0, x: dist }, -offset);
+			tl.to(logo, { duration: 2, autoAlpha: 0 }, '-=1');
 		});
 	});
 });
