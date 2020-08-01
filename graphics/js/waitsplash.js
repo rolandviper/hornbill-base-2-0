@@ -34,14 +34,39 @@ $(document).ready(function() {
 		var objs = $(this).find('.slice').css('opacity', 0);
 		var logo = $('.logo').css('opacity', 0);
 
+		const lower = $('.lower').css('opacity', 0);
+		const title = document.getElementById('title');
+		const sub = document.getElementById('sub');
+
 		nodecg.listenFor('startsplash', (data) => {
+			title.innerHTML = data.title;
+			sub.innerHTML = data.sub;
+
 			tl.staggerTo(objs, speed, { y: dist, autoAlpha: 1, x: dist }, offset);
-			tl.to(logo, { duration: 2, autoAlpha: 1, ease: 'power1.in' }, '-=1');
+			tl.to(logo, { duration: 1, autoAlpha: 1, ease: 'power1.in' }, '-=1');
+			tl.to(lower, { duration: 1, autoAlpha: 1 });
+			tl.from([ title, sub ], { duration: 1, width: 0, autoAlpha: 0 });
 		});
 
 		nodecg.listenFor('stopsplash', () => {
 			tl.staggerTo(objs, speed, { y: dist, autoAlpha: 0, x: dist }, -offset);
-			tl.to(logo, { duration: 2, autoAlpha: 0 }, '-=1');
+			tl.to(lower, { duration: 1, autoAlpha: 0 });
+			tl.to(logo, { duration: 1, autoAlpha: 0 }, '-=1');
+
+			tl.call(() => {
+				title.innerHTML = '';
+				sub.innerHTML = '';
+			});
+		});
+
+		nodecg.listenFor('updatesplash', async (data) => {
+			tl.to(lower, { duration: 1, autoAlpha: 0 });
+			await tl.set([ lower, title, sub ], { width: '', opacity: '' });
+
+			title.innerHTML = data.title;
+			sub.innerHTML = data.sub;
+
+			tl.to(lower, { duration: 1, autoAlpha: 1 });
 		});
 	});
 });

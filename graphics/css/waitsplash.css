@@ -2,6 +2,8 @@ body {
 	margin: 0;
 	padding: 0;
 	overflow: hidden;
+
+	font-family: 'Passion One', cursive;
 }
 
 #img1 {
@@ -30,12 +32,58 @@ body {
 
 .logo {
 	position: absolute;
-	width: 52vw;
+	width: 49vw;
 	height: 73%;
 	z-index: 1;
-	top: 3%;
-	left: 25%;
+	top: 1%;
+	left: 50%;
+
+	margin-left: auto;
+	margin-right: auto;
+
+	transform: translate(-50%, 0);
 }
 
 #hornbill {
+}
+
+.lower {
+	position: absolute;
+	z-index: 3;
+	top: 70%;
+	left: 50%;
+
+	display: flex;
+	flex-direction: column;
+
+	align-items: flex-end;
+
+	transform: translate(-50%, 0);
+}
+
+.text {
+	background: white;
+	width: fit-content;
+	padding: 0 15px 0 15px;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+#title {
+	font-size: 7vh;
+
+	letter-spacing: 3px;
+	font-weight: regular;
+
+	flex-wrap: nowrap;
+}
+
+#sub {
+	font-size: 5vh;
+	letter-spacing: 2px;
+
+	background-color: #f9b41c;
+
+	border: 2px solid black;
+	font-family: 'Roboto', sans-serif;
 }
