@@ -49,9 +49,9 @@ $(document).ready(function() {
 		});
 
 		nodecg.listenFor('stopsplash', () => {
-			tl.staggerTo(objs, speed, { y: dist, autoAlpha: 0, x: dist }, -offset);
 			tl.to(lower, { duration: 1, autoAlpha: 0 });
 			tl.to(logo, { duration: 1, autoAlpha: 0 }, '-=1');
+			tl.staggerTo(objs, speed, { y: dist, autoAlpha: 0, x: dist }, -offset);
 
 			tl.call(() => {
 				title.innerHTML = '';

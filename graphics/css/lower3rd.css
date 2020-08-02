@@ -1,0 +1,57 @@
+body {
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+
+	font-family: 'Passion One', cursive;
+}
+
+.container {
+	position: relative;
+	width: 50vw;
+	height: 20vh;
+	margin: 60vh auto;
+	overflow: hidden;
+}
+
+.text {
+	font-size: 6vh;
+
+	padding-left: 2%;
+	padding-right: 2%;
+	color: black;
+}
+
+.top {
+	margin-left: 2vw;
+}
+
+.bottom {
+	margin-left: 10vw;
+}
+
+.black {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	height: 100%;
+	width: 0;
+
+	background-color: #1e2120;
+	z-index: 1;
+}
+
+.orange {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	height: 100%;
+	width: 0;
+
+	background-color: #c78071;
+	z-index: 1;
+}
