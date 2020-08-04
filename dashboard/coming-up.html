@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ComingUp</title>
+</head>
+<body>
+    <span>ComingUpTitle</span>
+    <br>
+    <input type="text" id="title">
+    <br>
+    <span>ComingUpInfo</span>
+    <br>
+    <input type="text" id="info">
+    <br>
+    <span>ComingUpSub</span>
+    <br>
+    <input type="text" id="sub">
+    <br>
+    <hr>
+    <button onclick="update()">Play</button>
+
+    <script>
+    const titleInput = document.getElementById('title');
+    const infoInput = document.getElementById('info');
+    const subInput = document.getElementById('sub');
+
+    function update() {
+	const data = { title: titleInput.value, info: infoInput.value, sub: subInput.value };
+
+	nodecg.sendMessage('playComingUp', data);
+    }
+
+    </script>
+</body>
+</html>

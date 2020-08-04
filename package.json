@@ -33,6 +33,13 @@
 				"width": 2,
 				"file": "eventschedule.html",
 				"headerColor": "#525F78"
+			},
+			{
+				"name": "Coming Up",
+				"title": "Coming Up",
+				"width": 2,
+				"file": "coming-up.html",
+				"headerColor": "#525F78"
 			}
 		],
 		"graphics": [
@@ -48,6 +55,11 @@
 			},
 			{
 				"file": "schedule.html",
+				"width": 1920,
+				"height": 1080
+			},
+			{
+				"file": "comingup.html",
 				"width": 1920,
 				"height": 1080
 			}
