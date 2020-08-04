@@ -26,6 +26,13 @@
 				"width": 2,
 				"file": "lowerthird.html",
 				"headerColor": "#525F78"
+			},
+			{
+				"name": "Schedule",
+				"title": "Event Schedule",
+				"width": 2,
+				"file": "eventschedule.html",
+				"headerColor": "#525F78"
 			}
 		],
 		"graphics": [
@@ -36,6 +43,11 @@
 			},
 			{
 				"file": "lower3rd.html",
+				"width": 1920,
+				"height": 1080
+			},
+			{
+				"file": "schedule.html",
 				"width": 1920,
 				"height": 1080
 			}
