@@ -1,6 +1,6 @@
 body {
 	font-family: Staatliches, sans-serif;
-	background: transparent;
+	background: red;
 	/* background-image: url('./img/basegameref/stagereference.jpg');
 	background-size: cover; */
 }
@@ -18,7 +18,7 @@ body {
 	overflow: hidden;
 	align-items: center;
 
-	opacity: 1;
+	opacity: 0;
 }
 
 .text {
@@ -34,23 +34,26 @@ body {
 	font-size: 10vh;
 	letter-spacing: 7px;
 	font-weight: bold;
+	font-family: 'Passion One', cursive;
 }
 
 #title {
 	font-size: 7vh;
 	letter-spacing: 7px;
 	font-weight: light;
-	background-color: #ffba00;
+	font-family: 'Roboto', sans-serif;
 }
 
 #info {
 	font-size: 5vh;
 	letter-spacing: 7px;
 	font-weight: light;
+	font-family: 'Roboto', sans-serif;
 }
 
 #sub {
 	font-size: 3vh;
 	letter-spacing: 7px;
 	font-weight: light;
+	font-family: 'Roboto', sans-serif;
 }

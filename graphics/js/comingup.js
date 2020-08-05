@@ -6,6 +6,8 @@ const infoEl = document.getElementById('info');
 const subEl = document.getElementById('sub');
 const mainEl = document.getElementById('main');
 
+const text = document.querySelectorAll('.text');
+
 nodecg.listenFor('playComingUp', (data) => {
 	titleEl.innerHTML = data.title;
 	infoEl.innerHTML = data.info;
@@ -13,19 +15,11 @@ nodecg.listenFor('playComingUp', (data) => {
 
 	const tl = gsap.timeline();
 
-	tl.from([ mainEl, nameplateEl ], 1, { width: 0, opacity: 0 });
-	tl.to([ mainEl, nameplateEl ], 1, { opacity: 1 }, '-=1');
+	tl.to(nameplateEl, { duration: 0.5, autoAlpha: 1 });
 
-	tl.from([ titleEl ], 1, { width: 0, opacity: 0 });
-	tl.to([ titleEl ], 1, { opacity: 1 }, '-=1');
+	tl.from(text, { duration: 1, stagger: 0.5, autoAlpha: 0, width: 0, backgroundColor: 'black' });
 
-	tl.from([ subEl ], 1, { width: 0, opacity: 0 });
-	tl.to([ subEl ], 1, { opacity: 1 }, '-=1');
-
-	tl.from([ infoEl ], 1, { width: 0, opacity: 0 });
-	tl.to([ infoEl ], 1, { opacity: 1 }, '-=1');
-
-	tl.to([ nameplateEl, titleEl, , infoEl, mainEl, subEl ], 1, { width: 0, opacity: 0 }, '+=5');
+	tl.to(text, { duration: 1, stagger: -0.2, autoAlpha: 0, width: 0, backgroundColor: 'yellow' }, '+=5');
 
 	tl.call(() => {
 		titleEl.innerHTML = '';
@@ -33,5 +27,5 @@ nodecg.listenFor('playComingUp', (data) => {
 		subEl.innerHTML = '';
 	});
 
-	tl.set([ nameplateEl, titleEl, subEl, infoEl, mainEl ], { width: '', opacity: '' });
+	tl.set([ nameplateEl, titleEl, subEl, infoEl, mainEl, text ], { width: '', opacity: '', backgroundColor: '' });
 });
