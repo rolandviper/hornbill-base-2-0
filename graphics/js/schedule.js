@@ -31,7 +31,7 @@ nodecg.listenFor('showSchedule', (data) => {
 
 	tl.from(text, { duration: 1, width: 0, stagger: 0.5, autoAlpha: 0, backgroundColor: 'black' });
 
-	tl.to(text, { duration: 0.5, width: 0, stagger: -0.2, autoAlpha: 0, backgroundColor: 'yellow' }, '+=5');
+	tl.to(text, { duration: 0.5, width: 0, stagger: -0.2, autoAlpha: 0, backgroundColor: 'yellow' }, '+=8');
 
 	tl.call(() => {
 		event1.innerHTML = '';
